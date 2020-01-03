@@ -4,14 +4,19 @@
 	<title>Senators</title>
 </head>
 <body>
-	<div id="Search">
-		<input type="search" name="Search" oninput="search()" id="searchbox">
-		<input type="submit" value="search" >
+	<div id="searchdiv">	<link rel="stylesheet" type="text/css" href="index.css">
+		<center>
+			<div id="searchdivs-inner">
+				<img src="search.svg" id="search-icon">
+				<input type="search" name="search" oninput="search()" id="search" placeholder="State Or Name...">
+			</div>
+		</center>
 	</div>
-	<div id="container">
-		<div id="box">
-			
+	<div id="layer">
+		<div id="container">
+			<div id="box"></div>
 		</div>
+		<div id="container2"></div>
 	</div>
 	<script type="text/javascript" src="senators.js"></script>
 	<script type="text/javascript" src="index.js"></script>

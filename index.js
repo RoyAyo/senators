@@ -4,23 +4,32 @@ container.appendChild(box);
 
 
 const render = (state,name,no,mail,box) => {
+	//create all needed elemenets
 	const senate = document.createElement('div');
-
-	const nameDiv = document.createElement('h2');
+	const nameDiv = document.createElement('h4');
 	const noDiv = document.createElement('p');
 	const mailDiv = document.createElement('p');
 	const stateDiv = document.createElement('p');
 
+	//add the texts inside the textNodes
 	nameDiv.appendChild(document.createTextNode(name));
 	noDiv.appendChild(document.createTextNode(no));
 	mailDiv.appendChild(document.createTextNode(mail));
 	stateDiv.appendChild(document.createTextNode(state));
 
+	//give class to all the divs
+	senate.className = "senate";
+	nameDiv.className = "name-div";
+	noDiv.className = "no-div";
+	stateDiv.className = "state-div";
+
+	//append them all to a div and to the html
 	senate.appendChild(nameDiv);
+	senate.appendChild(stateDiv);
 	senate.appendChild(noDiv);
 	senate.appendChild(mailDiv);
-	senate.appendChild(stateDiv);
 	box.appendChild(senate);
+
 }
 
 
@@ -38,7 +47,7 @@ const workflow = (list,box) => {
 }
 
 const search = () => {
-	const v =document.getElementById("searchbox").value.toLowerCase();
+	const v =document.getElementById("search").value.toLowerCase();
 	var box = document.getElementById('box');
 	container.removeChild(box);
 	box = document.createElement('div');
